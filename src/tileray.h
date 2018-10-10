@@ -53,6 +53,7 @@ class tileray
         bool mostly_vertical() const;  // return if ray is mostly vertical
 
         void advance( int num = 1 ); // move to the next tile (calculate last dx, dy)
+        void slow_advance( int num = 1 ); // inefficiently calculate dx, dy
         void clear_advance(); // clear steps, leftover, last_dx, and last_dy
         bool end();      // do we reach the end of (dx,dy) defined ray?
 };

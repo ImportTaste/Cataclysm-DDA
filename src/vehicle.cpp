@@ -1741,6 +1741,7 @@ bool vehicle::find_and_split_vehicles( int exclude )
     }
 
     if( !all_vehicles.empty() ) {
+        add_msg( "Splitting off %d new vehicles from %s", all_vehicles.size(), disp_name().c_str() );
         bool success = split_vehicles( all_vehicles );
         if( success ) {
             // update the active cache
@@ -1813,7 +1814,7 @@ bool vehicle::split_vehicles( const std::vector<std::vector <int>> &new_vehs,
             new_v_pos3 = global_part_pos3( parts[ split_part0 ] );
             mnt_offset = parts[ split_part0 ].mount;
             new_vehicle = g->m.add_vehicle( vproto_id( "none" ), new_v_pos3, face.dir() );
-            new_vehicle->name = name;
+            new_vehicle->name = string_format( "%s.%d", name.c_str(), i ) ;
             new_vehicle->move = move;
             new_vehicle->turn_dir = turn_dir;
             new_vehicle->velocity = velocity;
@@ -2499,6 +2500,12 @@ void vehicle::coord_translate( tileray tdir, const point &pivot, const point &p,
     q.y = tdir.dy() + tdir.ortho_dy( p.y - pivot.y );
 }
 
+void vehicle::coord_translate( tileray tdir, point delta, const point &pivot, const point &p, point &q ) const
+{
+    q.x = delta.x + tdir.ortho_dx( p.y - pivot.y );
+    q.y = delta.y + tdir.ortho_dy( p.y - pivot.y );
+}
+
 point vehicle::rotate_mount( int old_dir, int new_dir, const point &pivot, const point &p ) const
 {
     point q;
@@ -2526,13 +2533,21 @@ void vehicle::precalc_mounts( int idir, int dir, const point &pivot )
     }
     tileray tdir( dir );
     std::unordered_map<point, point> mount_to_precalc;
+//    std::map<int, point> offset_to_advance;
     for( auto &p : parts ) {
         if( p.removed ) {
             continue;
         }
         auto q = mount_to_precalc.find( p.mount );
         if( q == mount_to_precalc.end() ) {
-            coord_translate( tdir, pivot, p.mount, p.precalc[idir] );
+//            auto r = offset_to_advance.find( p.mount.x );
+//            if( r == offset_to_advance.end() ) {
+                coord_translate( tdir, pivot, p.mount, p.precalc[idir] );
+//                point advance = point( tdir.dx(), tdir.dy() );
+//                offset_to_advance.insert( { p.mount.x, advance } );
+//            } else {
+//                coord_translate( tdir, r->second, pivot, p.mount, p.precalc[idir] );
+//            }
             mount_to_precalc.insert( { p.mount, p.precalc[idir] } );
         } else {
             p.precalc[idir] = q->second;

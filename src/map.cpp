@@ -417,7 +417,7 @@ void map::move_vehicle( vehicle &veh, const tripoint &dp, const tileray &facing 
     if( ( dp.x == 0 && dp.y == 0 && dp.z == 0 ) ||
         ( abs( dp.x ) > 1 || abs( dp.y ) > 1 || abs( dp.z ) > 1 ) ||
         ( vertical && ( dp.x != 0 || dp.y != 0 ) ) ) {
-        debugmsg( "move_vehicle called with %d,%d,%d displacement vector", dp.x, dp.y, dp.z );
+        debugmsg( "move_vehicle %s called with %d,%d,%d displacement vector", veh.disp_name().c_str(), dp.x, dp.y, dp.z );
         return;
     }
 

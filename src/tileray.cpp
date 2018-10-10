@@ -184,6 +184,51 @@ void tileray::advance( int num )
     if( num == 0 ) {
         return;
     }
+    const bool vertical = ax <= ay;
+    if( vertical ) {
+        if( deltay < 0 ) {
+            last_dy = -num;
+        } else {
+            last_dy = num;
+        }
+        if( ax == 0 ) {
+            return;
+        }
+        int upsize = num * deltax;
+        last_dx = ( upsize + leftover ) / ay;
+        leftover += upsize - last_dx * ay;
+    } else {
+        if( deltax < 0 ) {
+            last_dx = -num;
+        } else {
+            last_dx = num;
+        }
+        if( ay == 0 ) {
+            return;
+        }
+        int upsize = num * deltay;
+        last_dy = ( upsize + leftover ) / ax;
+        leftover += upsize - last_dy * ax;
+    }
+#if 0
+    // offset calculated for 0-90 deg quadrant, we need to adjust if direction is other
+    int quadr = ( direction / 90 ) % 4;
+    last_dx *= sx[quadr];
+    last_dy *= sy[quadr];
+    if( num < 0 ) {
+        last_dx = -last_dx;
+        last_dy = -last_dy;
+    }
+#endif
+}
+
+// old advance algorithm, kept behind for comparison purposes and to check correctness
+void tileray::slow_advance( int num )
+{
+    last_dx = last_dy = 0;
+    if( num == 0 ) {
+        return;
+    }
     int anum = abs( num );
     steps = anum;
     const bool vertical = mostly_vertical();
