@@ -110,8 +110,11 @@ static bool test_drag(
     const double c_air = veh_ptr->coeff_air_drag();
     const double c_rolling = veh_ptr->coeff_rolling_drag();
     const double c_water = veh_ptr->coeff_water_drag();
-    const int safe_v = veh_ptr->safe_ground_velocity( false );
-    const int max_v = veh_ptr->max_ground_velocity( false );
+    const bool water_only = veh_ptr->wheelcache.empty();
+    const int safe_v = water_only ? veh_ptr->safe_water_velocity( false ) :
+                       veh_ptr->safe_ground_velocity( false );
+    const int max_v = water_only ? veh_ptr->max_water_velocity( false ) :
+                      veh_ptr->max_ground_velocity( false );
 
     const auto d_in_bounds = [&]( const double expected, double value ) {
         double expected_high = expected * 1.05;
@@ -245,16 +248,16 @@ TEST_CASE( "vehicle_drag_calc_baseline", "[.]" )
 // coeffs are dimensionless, speeds are 100ths of mph, so 6101 is 61.01 mph
 TEST_CASE( "vehicle_drag", "[vehicle] [engine]" )
 {
-    test_vehicle_drag( "bicycle", 0.609525, 0.016957, 42.679167, 2356, 3078 );
-    test_vehicle_drag( "bicycle_electric", 0.609525, 0.031616, 79.577083, 2672, 3208 );
+    test_vehicle_drag( "bicycle", 0.609525, 0.016957, 42.679167, 1592, 2084 );
+    test_vehicle_drag( "bicycle_electric", 0.609525, 0.031616, 79.577083, 2280, 2569 );
     test_vehicle_drag( "motorcycle", 0.609525, 0.568903, 254.351562, 7212, 8628 );
     test_vehicle_drag( "motorcycle_sidecart", 0.880425, 0.857295, 454.268750, 6349, 7604 );
     test_vehicle_drag( "quad_bike", 0.537285, 1.110281, 709.138393, 7369, 8856 );
     test_vehicle_drag( "scooter", 0.609525, 0.171854, 129.764583, 4012, 4902 );
     test_vehicle_drag( "scooter_electric", 0.609525, 0.189203, 142.864583, 4919, 5098 );
     test_vehicle_drag( "superbike", 0.609525, 0.844993, 377.789062, 9867, 11765 );
-    test_vehicle_drag( "tandem", 0.609525, 0.021344, 40.290625, 2353, 3076 );
-    test_vehicle_drag( "unicycle", 0.690795, 0.002400, 24.162500, 2266, 2958 );
+    test_vehicle_drag( "tandem", 0.609525, 0.021344, 40.290625, 1589, 2082 );
+    test_vehicle_drag( "unicycle", 0.690795, 0.002400, 24.162500, 1537, 2007 );
     test_vehicle_drag( "beetle", 0.785610, 1.693784, 1199.020312, 8902, 10668 );
     test_vehicle_drag( "bubble_car", 0.823988, 1.670566, 1126.270833, 9434, 9785 );
     test_vehicle_drag( "car", 0.294604, 2.366883, 1117.002083, 11837, 14304 );
@@ -308,11 +311,10 @@ TEST_CASE( "vehicle_drag", "[vehicle] [engine]" )
     test_vehicle_drag( "schoolbus", 0.411188, 3.060324, 1370.046591, 12891, 15087 );
     test_vehicle_drag( "security_van", 0.541800, 7.592192, 6231.269792, 10977, 13009 );
     test_vehicle_drag( "wienermobile", 1.063697, 2.315334, 1900.304167, 11201, 13374 );
-    test_vehicle_drag( "canoe", 0.609525, 6.948203, 1.967437, 331, 691 );
-    test_vehicle_drag( "kayak", 0.609525, 3.243223, 1.224458, 655, 1236 );
-    test_vehicle_drag( "kayak_racing", 0.609525, 2.912135, 1.099458, 715, 1320 );
-    test_vehicle_drag( "DUKW", 0.776902, 3.713785, 80.325824, 10210, 12293 );
-    test_vehicle_drag( "raft", 0.997815, 8.950399, 5.068750, 259, 548 );
-    test_vehicle_drag( "inflatable_boat", 0.469560, 2.823845, 1.599187, 741, 1382 );
-
+    test_vehicle_drag( "canoe", 0.609525, 6.948203, 1.967437, 731, 954 );
+    test_vehicle_drag( "kayak", 0.609525, 3.243223, 1.224458, 818, 1068 );
+    test_vehicle_drag( "kayak_racing", 0.609525, 2.912135, 1.099458, 838, 1094 );
+    test_vehicle_drag( "DUKW", 0.776903, 3.713785, 80.325824, 10210, 12293 );
+    test_vehicle_drag( "raft", 0.997815, 8.950399, 5.068750, 549, 717 );
+    test_vehicle_drag( "inflatable_boat", 0.469560, 2.823845, 1.599187, 786, 1026 );
 }
