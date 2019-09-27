@@ -1,0 +1,1 @@
+{"additional_tiles": [{"id": "edge", "fg": ["f_tatami_0"]}, {"id": "end_piece", "fg": ["f_tatami_0"]}, {"id": "unconnected", "fg": ["f_tatami_0"]}, {"id": "corner", "fg": ["f_tatami_2"]}, {"id": "center", "fg": ["f_tatami_3"]}, {"id": "t_connection", "fg": ["f_tatami_3"]}], "multitile": true, "rotates": true, "id": "f_straw_bed", "fg": ["f_tatami_0"]}

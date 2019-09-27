@@ -1,0 +1,1 @@
+{"additional_tiles": [{"id": "unconnected", "fg": ["t_elevator_0"]}, {"id": "center", "fg": ["t_elevator_0"]}, {"id": "corner", "fg": ["t_elevator_1"]}, {"id": "edge", "fg": ["t_elevator_2"]}, {"id": "end_piece", "fg": ["t_elevator_3"]}, {"id": "t_connection", "fg": ["t_elevator_4"]}], "multitile": true, "rotates": false, "id": "t_elevator", "fg": ["t_elevator_0"]}

@@ -1,0 +1,1 @@
+{"additional_tiles": [{"id": "center", "fg": ["f_rack_0"]}, {"id": "edge", "fg": ["f_rack_0"]}, {"id": "corner", "fg": ["f_rack_1"]}, {"id": "end_piece", "fg": ["f_rack_2", "f_rack_3", "f_rack_4", "f_rack_5"]}, {"id": "t_connection", "fg": ["f_rack_6"]}], "multitile": true, "id": "f_rack", "fg": ["f_rack_0"]}

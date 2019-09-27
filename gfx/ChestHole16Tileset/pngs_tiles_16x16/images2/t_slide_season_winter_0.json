@@ -1,0 +1,1 @@
+{"additional_tiles": [{"bg": "t_grass_season_winter_1", "id": "edge", "fg": ["t_slide_season_winter_0"]}, {"bg": "t_grass_season_winter_1", "id": "end_piece", "fg": ["t_slide_season_winter_2"]}], "multitile": true, "bg": "t_grass_season_winter_1", "id": "t_slide_season_winter", "fg": ["t_slide_season_winter_0"]}

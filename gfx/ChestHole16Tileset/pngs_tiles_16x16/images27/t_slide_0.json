@@ -1,0 +1,1 @@
+{"additional_tiles": [{"bg": "t_grass_0", "id": "end_piece", "fg": ["t_slide_2"]}, {"id": "unconnected", "fg": ["t_slide_3"]}], "multitile": true, "bg": "t_grass_0", "id": "t_slide", "fg": ["t_slide_0"]}

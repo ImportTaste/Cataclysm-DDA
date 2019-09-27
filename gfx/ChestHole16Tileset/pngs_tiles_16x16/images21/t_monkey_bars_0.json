@@ -1,0 +1,1 @@
+{"additional_tiles": [{"bg": "t_grass_0", "id": "center", "fg": ["t_monkey_bars_2"]}, {"bg": "t_grass_0", "id": "corner", "fg": ["t_monkey_bars_3"]}, {"bg": "t_grass_0", "id": "t_connection", "fg": ["t_monkey_bars_4"]}], "multitile": true, "bg": "t_grass_0", "id": "t_monkey_bars", "fg": ["t_monkey_bars_0"]}

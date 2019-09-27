@@ -1,0 +1,1 @@
+{"additional_tiles": [{"id": "end_piece", "fg": ["t_wall_log_0"]}, {"id": "unconnected", "fg": ["t_wall_log_0"]}, {"id": "center", "fg": ["t_wall_log_2"]}, {"id": "corner", "fg": ["t_wall_log_3"]}, {"id": "t_connection", "fg": ["t_wall_log_4"]}], "multitile": true, "bg": "t_tree_hickory_season_winter_1", "id": "t_wall_log_season_winter", "fg": ["t_wall_log_0"]}

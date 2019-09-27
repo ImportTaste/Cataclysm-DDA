@@ -1,0 +1,1 @@
+{"bg": "f_shower_1", "additional_tiles": [{"bg": "f_shower_1", "id": "corner", "fg": ["f_tatami_2"]}, {"bg": "f_shower_1", "id": "edge", "fg": ["f_tatami_0"]}, {"bg": "f_shower_1", "id": "t_connection", "fg": ["f_tatami_3"]}], "fg": ["f_tatami_0"], "multitile": true, "rotates": true, "id": "f_tatami"}

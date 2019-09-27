@@ -1,0 +1,1 @@
+{"bg": "overlay_wielded_10mm_1", "additional_tiles": [{"id": "broken", "fg": ["vp_mcutter_2"]}], "fg": ["vp_mcutter_0"], "multitile": true, "rotates": false, "id": ["vp_mcutter", "vp_cutter", "vp_cutternc", "vp_ripper", "vp_aripper", "vp_mripper", "vp_arippernc"]}

@@ -1,0 +1,1 @@
+{"additional_tiles": [{"id": "broken", "fg": ["vp_door_opaque_1"]}, {"id": "open", "fg": ["vp_door_sliding_2"]}], "multitile": true, "rotates": true, "id": "vp_door_sliding", "fg": ["vp_door_sliding_0"]}

@@ -1,0 +1,1 @@
+{"additional_tiles": [{"bg": "f_canvas_wall_1", "id": "corner", "fg": ["t_wall_wood_3", "t_wall_wood_4", "t_wall_wood_5", "t_wall_wood_6"]}], "multitile": true, "bg": "f_canvas_wall_1", "id": "t_wall_wood", "fg": ["t_wall_wood_0", "t_wall_wood_1", "t_wall_wood_0", "t_wall_wood_1"]}

@@ -1,0 +1,1 @@
+{"additional_tiles": [{"id": "center", "fg": ["t_dock_0"]}, {"id": "unconnected", "fg": ["t_dock_0"]}, {"id": "corner", "fg": ["t_dock_1"]}, {"id": "edge", "fg": ["t_dock_2"]}, {"id": "end_piece", "fg": ["t_dock_3"]}, {"id": "t_connection", "fg": ["t_dock_4"]}], "multitile": true, "rotates": false, "id": "t_dock", "fg": ["t_dock_0"]}

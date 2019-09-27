@@ -1,0 +1,1 @@
+{"bg": "vp_cargo_space_1", "additional_tiles": [{"id": "broken", "fg": ["vp_v_curtain_2"]}], "fg": ["vp_v_curtain_0"], "multitile": true, "rotates": true, "id": "vp_aisle_curtain"}

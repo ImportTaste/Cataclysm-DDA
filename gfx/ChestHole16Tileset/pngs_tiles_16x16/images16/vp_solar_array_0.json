@@ -1,0 +1,1 @@
+{"bg": "overlay_wielded_10mm_1", "additional_tiles": [{"id": "broken", "fg": ["vp_solar_array_2"]}], "fg": ["vp_solar_array_0"], "multitile": true, "rotates": false, "id": ["vp_solar_array", "vp_solar_array2"]}

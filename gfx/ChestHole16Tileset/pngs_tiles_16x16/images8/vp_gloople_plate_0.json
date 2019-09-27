@@ -1,0 +1,1 @@
+{"bg": "overlay_wielded_10mm_1", "additional_tiles": [{"id": "broken", "fg": ["vp_gloople_plate_0"]}], "fg": ["vp_gloople_plate_0"], "multitile": true, "rotates": false, "id": ["vp_gloople_plate", "vp_gray_plate", "vp_oozle_plate", "vp_rebar_plate", "vp_rebar_plate", "vp_spring_plate"]}

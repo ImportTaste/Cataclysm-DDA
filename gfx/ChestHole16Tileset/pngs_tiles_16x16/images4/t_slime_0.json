@@ -1,0 +1,1 @@
+{"bg": "f_canvas_wall_1", "additional_tiles": [{"id": "unconnected", "fg": ["t_slime_0"]}, {"id": "center", "fg": ["t_slime_2"]}, {"id": "corner", "fg": ["t_slime_3"]}, {"id": "edge", "fg": ["t_slime_4"]}, {"id": "end_piece", "fg": ["t_slime_5"]}, {"id": "t_connection", "fg": ["t_slime_6"]}], "fg": ["t_slime_0"], "multitile": true, "rotates": false, "id": "t_slime"}

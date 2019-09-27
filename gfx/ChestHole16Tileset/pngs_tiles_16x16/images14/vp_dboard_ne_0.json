@@ -1,0 +1,1 @@
+{"rotates": false, "additional_tiles": [{"id": "broken", "fg": ["vp_dboard_ne_2"]}], "bg": "overlay_wielded_10mm_1", "id": ["vp_dboard_ne", "vp_clothboard_ne", "vp_cloth_halfboard_ne"], "fg": ["vp_dboard_ne_0"]}

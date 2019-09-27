@@ -1,0 +1,1 @@
+{"additional_tiles": [{"id": "corner", "fg": ["t_sandbox_0"]}, {"id": "center", "fg": ["t_sandbox_1"]}, {"id": "edge", "fg": ["t_sandbox_2"]}, {"id": "t_connection", "fg": ["t_sandbox_2"]}, {"id": "unconnected", "fg": ["t_sandbox_3"]}], "multitile": true, "rotates": false, "id": "t_sandbox", "fg": ["t_sandbox_0"]}

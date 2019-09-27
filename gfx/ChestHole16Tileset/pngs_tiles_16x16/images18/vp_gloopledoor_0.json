@@ -1,0 +1,1 @@
+{"additional_tiles": [{"bg": "vp_gloopledoor_0", "id": "broken", "fg": ["mon_marloss_man_0"]}, {"id": "open", "fg": ["vp_gloopledoor_2"]}], "multitile": true, "rotates": true, "id": "vp_oozledoor_opaque", "fg": ["vp_gloopledoor_0"]}

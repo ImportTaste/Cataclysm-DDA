@@ -1,0 +1,1 @@
+{"bg": "overlay_wielded_10mm_1", "additional_tiles": [{"id": "broken", "fg": ["overlay_wielded_atomic_lamp_2"]}], "fg": ["overlay_wielded_atomic_lamp_0"], "multitile": true, "rotates": false, "id": "vp_atomic_lamp"}

@@ -1,0 +1,1 @@
+{"bg": "overlay_wielded_10mm_1", "additional_tiles": [{"id": "corner", "fg": ["t_sconc_wall_3"]}], "fg": ["t_sconc_wall_0", "t_sconc_wall_1", "t_sconc_wall_0", "t_sconc_wall_1"], "multitile": true, "rotates": true, "id": "t_strconc_wall"}

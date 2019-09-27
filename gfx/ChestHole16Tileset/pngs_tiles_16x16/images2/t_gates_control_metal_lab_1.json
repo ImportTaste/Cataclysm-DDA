@@ -1,0 +1,1 @@
+{"bg": "f_canvas_wall_1", "additional_tiles": [{"id": "corner", "fg": ["t_pavement_2", "t_pavement_3", "t_pavement_4", "t_pavement_5"]}], "fg": ["t_gates_control_metal_lab_1"], "multitile": true, "rotates": false, "id": "t_pavement"}
